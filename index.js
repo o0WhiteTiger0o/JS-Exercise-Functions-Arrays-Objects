@@ -37,9 +37,16 @@ function exampleFunction(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+  return {
+    id:id,
+    name: name,
+    email: email
+  };
+ 
 }
+
 
 /**
  * ### Challenge `getName`
@@ -54,8 +61,14 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(obj) {
+  let objname={
+    name: obj.name
+  }
+  
+  return "Hello, my name is " + objname.name;
+  
+  
 }
 
 /**
@@ -71,10 +84,18 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
-}
-
+function makeSmartPerson(name) {
+  const smartPerson = {
+    name: name,
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function(){
+      return "Hello my name is " + smartPerson.name;
+    }
+  }
+  return smartPerson;
+ }
 /**
  * ### Challenge `getCarInfoByIndex`
  * 
@@ -87,10 +108,10 @@ function makeSmartPerson(/* code here */) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(/* code here */) {
-  /* code here */
-}
+function getCarInfoByIndex() {
 
+}
+ 
 /**
  * ### Challenge `getLastCarInfo`
  * 
